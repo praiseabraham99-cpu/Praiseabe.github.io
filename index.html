@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Praise Abraham Raju — Sales & Business Growth</title>
-<meta name="description" content="MSc International Business graduate. Sales, business development & data-driven growth. Open to global roles." />
+<meta name="description" content="Praise Abraham Raju — Sales & Business Development Professional | CRM, SMB Growth & Data-Driven Client Success. MSc International Business, Aston University. Open to UK, India and remote roles." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,6 +236,22 @@ nav a:hover::after { width: 100%; }
 }
 @keyframes underline { to { transform: scaleX(1); } }
 
+.hero-subhead {
+  font-family: var(--mono);
+  font-size: clamp(.85rem, 1.2vw, 1rem);
+  letter-spacing: .04em;
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin: 1rem 0 0;
+  line-height: 1.55;
+  opacity: 0;
+  animation: fade-up .9s var(--ease) 1.0s forwards;
+}
+.hero-subhead .pipe {
+  color: var(--accent);
+  margin: 0 .35rem;
+}
+
 .hero-bottom {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -443,6 +459,67 @@ section {
   margin-top: .5rem;
 }
 
+/* TARGET ROLES */
+.roles-section {
+  background: var(--bg-2);
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.roles-eyebrow {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.roles-eyebrow::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--ink-soft);
+}
+.roles-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: 2rem;
+  max-width: 24ch;
+}
+.roles-title em { font-style: italic; color: var(--accent); }
+.roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.roles-list span {
+  display: inline-block;
+  padding: .65rem 1.1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .03em;
+  color: var(--ink);
+  transition: all .35s var(--ease);
+  cursor: default;
+}
+.roles-list span:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .roles-section { padding: 4rem 1.25rem; }
+}
+
 /* EXPERIENCE TIMELINE */
 .timeline {
   position: relative;
@@ -586,6 +663,38 @@ section {
 }
 .skill-bar.in-view .skill-bar-fill { width: var(--lvl); }
 .skill-card:hover .skill-bar-fill { background: var(--accent); }
+
+/* capability list (alternative to bars for tools with detailed sub-skills) */
+.cap-list {
+  display: grid;
+  gap: 1rem;
+}
+.cap-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--line);
+}
+.cap-item:last-child { border-bottom: none; padding-bottom: 0; }
+.cap-name {
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .04em;
+  color: var(--ink);
+  margin-bottom: .35rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.cap-name::before {
+  content: '◆';
+  color: var(--accent);
+  font-size: .65rem;
+}
+.cap-detail {
+  font-size: .82rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  padding-left: 1rem;
+}
 
 /* CERTIFICATIONS */
 .cert-grid {
@@ -744,6 +853,47 @@ section {
   flex-wrap: wrap;
 }
 
+.phone-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+  max-width: 30rem;
+}
+.phone-cell {
+  text-align: center;
+}
+.phone-cell .label {
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: .35rem;
+}
+.phone-cell a {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-style: italic;
+  transition: color .3s var(--ease);
+}
+.phone-cell a:hover { color: var(--accent); }
+.phone-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--line);
+}
+@media (max-width: 480px) {
+  .phone-divider { width: 32px; height: 1px; }
+}
+
 /* FOOTER */
 footer {
   border-top: 1px solid var(--line);
@@ -803,24 +953,29 @@ footer {
 <!-- HERO -->
 <header class="hero">
   <div class="hero-meta">
-    <span class="pulse">Open to opportunities · Kerala, India</span>
+    <span class="pulse">Open to UK · India · Remote — Available to relocate</span>
     <span>2026 — Portfolio v.02</span>
   </div>
 
   <h1 class="hero-headline split">
-    <span class="word" style="--i:0"><span>Sales,</span></span>
-    <span class="word" style="--i:1"><span>Strategy,</span></span><br>
-    <span class="word" style="--i:2"><span>&amp;</span></span>
-    <em><span class="word" style="--i:3"><span>Real</span></span>
-    <span class="word" style="--i:4"><span>Growth.</span></span></em>
+    <span class="word" style="--i:0"><span>Sales</span></span>
+    <span class="word" style="--i:1"><span>&amp;</span></span>
+    <em><span class="word" style="--i:2"><span>Business</span></span></em><br>
+    <em><span class="word" style="--i:3"><span>Development.</span></span></em>
   </h1>
+
+  <p class="hero-subhead">
+    CRM <span class="pipe">|</span> SMB Growth <span class="pipe">|</span> Data-Driven Client Success <span class="pipe">|</span> Consultative Selling
+  </p>
 
   <div class="hero-bottom">
     <p class="hero-tagline">
-      MSc International Business graduate from Aston University. I build SMB portfolios, run consultative sales motions, and turn data into the kind of decisions that actually move revenue.
+      MSc International Business — Aston University. I build SMB portfolios, run consultative sales motions, and use clean CRM data to drive client success.<br><br>
+      <strong style="color:var(--ink);">Open to UK, India &amp; remote opportunities. Available to relocate.</strong>
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary" data-hover>Get in touch <span class="arrow">→</span></a>
+      <a href="cv.pdf" download class="btn btn-ghost" data-hover>Download CV <span class="arrow">↓</span></a>
       <a href="#experience" class="btn btn-ghost" data-hover>The work</a>
     </div>
     <div></div>
@@ -894,6 +1049,21 @@ footer {
   </div>
 </section>
 
+<!-- TARGET ROLES -->
+<section class="roles-section">
+  <div class="roles-eyebrow reveal">Open to roles in</div>
+  <h2 class="roles-title reveal">Where I can add <em>real value</em> next.</h2>
+  <div class="roles-list reveal">
+    <span>Business Development</span>
+    <span>Sales Operations</span>
+    <span>Account Executive</span>
+    <span>Risk Analyst</span>
+    <span>Research Analyst</span>
+    <span>CRM / MIS Analyst</span>
+    <span>Client Success</span>
+  </div>
+</section>
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label reveal">02 — Experience</div>
@@ -907,10 +1077,10 @@ footer {
       </div>
       <div class="tl-company">Aximiz Ltd · United Kingdom</div>
       <ul class="tl-points">
-        <li>Managed end-to-end customer relationships across a portfolio of SMB clients, driving high satisfaction and repeat business.</li>
-        <li>Drove revenue growth through proactive upselling and cross-selling, contributing directly to company sales targets.</li>
-        <li>Collaborated cross-functionally to ensure seamless client onboarding and service delivery.</li>
-        <li>Maintained accurate CRM records enabling data-driven reporting and performance tracking.</li>
+        <li>Managed end-to-end customer relationships across an SMB client portfolio, building trust that improved retention and repeat business.</li>
+        <li>Supported revenue growth by identifying upsell and cross-sell opportunities, contributing to company sales targets through SMB account expansion.</li>
+        <li>Collaborated cross-functionally with operations and product teams to deliver seamless client onboarding and service handoffs.</li>
+        <li>Maintained accurate CRM records and pipeline data, enabling clean reporting and informed decision-making across the team.</li>
       </ul>
     </div>
 
@@ -921,9 +1091,9 @@ footer {
       </div>
       <div class="tl-company">Citilink Ltd · Birmingham, UK</div>
       <ul class="tl-points">
-        <li>Managed CRM records for customer interactions, ensuring data completeness for the sales team.</li>
-        <li>Tracked and analysed call outcomes to identify conversion patterns and improve lead qualification.</li>
-        <li>Produced consistent daily activity reports supporting data-driven decision-making.</li>
+        <li>Managed CRM records for daily customer interactions, ensuring data completeness and integrity for the wider sales team.</li>
+        <li>Tracked and analysed call outcomes to identify conversion patterns, supporting more effective lead qualification.</li>
+        <li>Produced consistent daily activity reports that supported data-informed decision-making across the team.</li>
       </ul>
     </div>
 
@@ -934,9 +1104,9 @@ footer {
       </div>
       <div class="tl-company">Cyberi · London, UK</div>
       <ul class="tl-points">
-        <li>Conducted market research and structured data for business opportunity analysis.</li>
-        <li>Assisted in lead generation campaigns through data collection and reporting.</li>
-        <li>Produced presentations using structured datasets to support BD strategy.</li>
+        <li>Conducted structured market research to support business opportunity analysis and inform BD strategy.</li>
+        <li>Supported lead generation campaigns by collecting, organising and reporting prospect data.</li>
+        <li>Built data-led presentations from structured datasets to communicate findings to senior stakeholders.</li>
       </ul>
     </div>
   </div>
@@ -960,10 +1130,24 @@ footer {
     <div class="skill-card reveal" data-hover>
       <div class="skill-icon">📊</div>
       <h3 class="skill-title">Data &amp; Analytics</h3>
-      <div class="skill-bar" style="--lvl:45%"><div class="skill-bar-head"><span>Power BI · Learning</span><span>45</span></div><div class="skill-bar-track"><div class="skill-bar-fill"></div></div></div>
-      <div class="skill-bar" style="--lvl:55%"><div class="skill-bar-head"><span>MS Excel · Learning</span><span>55</span></div><div class="skill-bar-track"><div class="skill-bar-fill"></div></div></div>
-      <div class="skill-bar" style="--lvl:82%"><div class="skill-bar-head"><span>CRM Analysis</span><span>82</span></div><div class="skill-bar-track"><div class="skill-bar-fill"></div></div></div>
-      <div class="skill-bar" style="--lvl:80%"><div class="skill-bar-head"><span>Market Research</span><span>80</span></div><div class="skill-bar-track"><div class="skill-bar-fill"></div></div></div>
+      <div class="cap-list">
+        <div class="cap-item">
+          <div class="cap-name">MS Excel</div>
+          <div class="cap-detail">Reporting · Data cleaning · Analysis · Pivot tables</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-name">Power BI</div>
+          <div class="cap-detail">Dashboard building · Data visualisation · Learning DAX</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-name">CRM Analytics</div>
+          <div class="cap-detail">Pipeline reporting · Customer insight · Performance tracking</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-name">Market Research</div>
+          <div class="cap-detail">Structured data · Opportunity analysis · Competitive scans</div>
+        </div>
+      </div>
     </div>
 
     <div class="skill-card reveal" data-hover>
@@ -1044,10 +1228,22 @@ footer {
   <div class="contact-eyebrow reveal">06 — Let's talk</div>
   <h2 class="contact-headline reveal">Got an <em>opportunity?</em><br>I'm listening.</h2>
   <a href="mailto:praise.abraham99@gmail.com" class="contact-email reveal" data-hover>praise.abraham99@gmail.com</a>
+
+  <div class="phone-row reveal">
+    <div class="phone-cell">
+      <div class="label">United Kingdom</div>
+      <a href="tel:+447776606342" data-hover>+44 7776 606342</a>
+    </div>
+    <div class="phone-divider"></div>
+    <div class="phone-cell">
+      <div class="label">India</div>
+      <a href="tel:+919847650441" data-hover>+91 98476 50441</a>
+    </div>
+  </div>
+
   <div class="contact-links reveal">
-    <a href="tel:+447776606342" class="btn btn-ghost" data-hover>+44 7776 606342</a>
-    <a href="tel:+919847650441" class="btn btn-ghost" data-hover>+91 98476 50441</a>
     <a href="https://linkedin.com/in/praiseabe" target="_blank" rel="noopener" class="btn btn-primary" data-hover>LinkedIn <span class="arrow">→</span></a>
+    <a href="cv.pdf" download class="btn btn-ghost" data-hover>Download CV <span class="arrow">↓</span></a>
   </div>
 </section>
 
